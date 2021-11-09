@@ -1,6 +1,6 @@
 body{
   padding-top: 25px;
-  padding-left: 500px;
+  padding-left: 50px;
 }
 
 .start{
@@ -11,6 +11,13 @@ body{
 }
 
 #end{
+  background-color: #bcb1ab;
+  border: 4px;
+  padding: 30px;
+  color: inherit;
+}
+
+#message {
   background-color: #bcb1ab;
   border: 4px;
   padding: 30px;
