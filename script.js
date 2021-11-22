@@ -43,7 +43,7 @@ if(vaxCard.fullyVaccined == true) {
    this.name = personName;
    this.expiration = new Date(expiration);
    this.today = new Date();
-   this.checkExpiration = function() { 
+   this.checkExpiration = function() {
      var difference = this.today.getTime() - this.expiration.getTime();
      var sign = Math.sign(difference)
      if (sign == -1) {
@@ -91,22 +91,22 @@ if(vaxCard.fullyVaccined == true) {
        if (idCardArray[index].name == this.name) {
          if (this.vaccined == true) {
            if (date >= 14) {
-             var message = " You're Fully Vaccinated! ";
+             message = " You're Fully Vaccinated! ";
              return message;
            } else {
-             var message = daysUntil + daysMessage + " till you could enter. ";
+             message = daysUntil + daysMessage + " till you could enter. ";
              return message;
            }
          } else {
-           var message = " You're Not Fully Vaccinated.";
+           message = " You're Not Fully Vaccinated.";
            return message;
          }
        } else {
-         var message = " Names on both ID and Vaccine card do not match. ";
+         message = " Names on both ID and Vaccine card do not match. ";
          return message;
        }
      } else {
-       var message = " Your ID is Expired. ";
+       message = " Your ID is Expired. ";
        return message;
      }
    };
