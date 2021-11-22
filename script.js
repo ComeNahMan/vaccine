@@ -79,9 +79,9 @@ if(vaxCard.fullyVaccined == true) {
    this.checkVaccine = function(index) {
      var date = this.getDifference();
 
-     var daysUntil = 14 - date;
+     var daysLeft = 14 - date;
 
-     if (daysUntil == 1) {
+     if (daysLeft == 1) {
        daysMessage = "one more day";
      } else {
        daysMessage = " days";
@@ -114,9 +114,9 @@ if(vaxCard.fullyVaccined == true) {
    this.access = function(index) {
      var date = this.getDifference();
 
-     var daysUntil = 14 - date;
+     var daysLeft = 14 - date;
 
-     if (daysUntil == 1) {
+     if (daysLeft == 1) {
        daysMessage = "one more day";
      } else {
        daysMessage = " days";
