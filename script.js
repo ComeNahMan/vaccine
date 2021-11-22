@@ -43,7 +43,7 @@ if(vaxCard.fullyVaccined == true) {
    this.name = personName;
    this.expiration = new Date(expiration);
    this.today = new Date();
-   this.checkExpiration = function() { //method
+   this.checkExpiration = function() { 
      var difference = this.today.getTime() - this.expiration.getTime();
      var sign = Math.sign(difference)
      if (sign == -1) {
