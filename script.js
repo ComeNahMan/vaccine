@@ -82,9 +82,9 @@ if(vaxCard.fullyVaccined == true) {
      var daysLeft = 14 - date;
 
      if (daysLeft == 1) {
-       daysMessage = "one more day";
+       daysMessage = " one more day ";
      } else {
-       daysMessage = " days";
+       daysMessage = " more days";
      }
 
      if (idCardArray[index].expiration == false) {
@@ -94,7 +94,7 @@ if(vaxCard.fullyVaccined == true) {
              message = " You're Fully Vaccinated! ";
              return message;
            } else {
-             message = daysUntil + daysMessage + " till you could enter. ";
+             message = " " + daysLeft + " " + daysMessage + " till you could enter. ";
              return message;
            }
          } else {
@@ -111,47 +111,52 @@ if(vaxCard.fullyVaccined == true) {
      }
    };
 
-   this.access = function(index) {
+   this.checkExpiration = function(index) {
      var date = this.getDifference();
 
      var daysLeft = 14 - date;
 
      if (daysLeft == 1) {
-       daysMessage = "one more day";
+       daysMessage = " one more day ";
      } else {
-       daysMessage = " days";
+       daysMessage = " more days ";
      }
 
      if (idCardArray[index].expiration == false) {
        if (idCardArray[index].name == this.name) {
          if (this.vaccined == true) {
            if (date >= 14) {
-             return "You Can Come In ";
+             message = " You Can Come In ";
+             return message;
            } else {
-             return "Nope";
+             message = " Nope ";
+             return message;
            }
          } else {
-           return "Gone From Here";
+           message = " Gone From Here ";
+           return message;
          }
        } else {
-         return "Rock So";
+         message = " Rock So ";
+         return message;
        }
      } else {
-       return "Hardlucks";
+       message = " Hardlucks ";
+       return message;
      }
-   };
+   }
  }
 
  var personVax1 = new vaxCard('Freddy Krueger', '2021-10-01', true);
- var personVax2 = new vaxCard('Jack Skellington', '2021-10-01', true);
+ var personVax2 = new vaxCard('Jack Skellington', '2021-11-20', true);
  var personVax3 = new vaxCard('Santa Claus', undefined, false);
- var personVax4 = new vaxCard('Lasko Fan', '2021-10-26', true);
+ var personVax4 = new vaxCard('Lasko Fan', '2021-10-13', true);
 
 
  var vaxCardArray = [personVax1, personVax2, personVax3, personVax4];
 
  var vaxArrayLength = vaxCardArray.length;
  for (var i = 0; i < vaxArrayLength; i++) {
-   document.write(idCardArray[i].name,)
+   document.write(idCardArray[i].name)
    document.write(vaxCardArray[i].checkVaccine(i))
  }
