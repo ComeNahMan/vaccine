@@ -23,3 +23,17 @@ body{
   padding: 30px;
   color: inherit;
 }
+
+table {
+  background-color: #bcb1ab;
+  border: 4px;
+  padding: 30px;
+  color: inherit;
+}
+
+td, th{
+  background-color: #bcb1ab;
+  border: 4px;
+  padding: 30px;
+  color: inherit;
+}
